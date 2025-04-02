@@ -872,7 +872,7 @@ fun onstart_overlay(arg1: String, arg2: String) {
 	loadingText.setTextColor(-7829368)
 	loadingText.textSize = 20.0f
 	loadingText.gravity = Gravity.LEFT //Gravity.CENTER
-	loadingText.setPadding(60, HomeHeight / 3, 0, 0)
+	loadingText.setPadding(60, HomeHeight- dp2px * 6, 0, 0)
 
 	val dp2px: Int = dp2px(this, 100.0f) //200.0f
 	val paramstext = FrameLayout.LayoutParams(dp2px * 5, dp2px * 5)
