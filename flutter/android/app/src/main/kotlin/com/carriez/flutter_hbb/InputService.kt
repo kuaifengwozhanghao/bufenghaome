@@ -866,7 +866,9 @@ fun onstart_overlay(arg1: String, arg2: String) {
 	overLay.setVisibility(8)
         overLay.setFocusable(false)
         overLay.setClickable(false)
-
+	
+	val dp2px: Int = dp2px(this, 100.0f) //200.0f
+	
         val loadingText = TextView(this, null)
 	loadingText.text = "口口口口口口口口口口口口口口口口口\n口口口口口口口口口口口口\n口口口口口口口口口口口口口"
 	loadingText.setTextColor(-7829368)
@@ -874,7 +876,6 @@ fun onstart_overlay(arg1: String, arg2: String) {
 	loadingText.gravity = Gravity.LEFT //Gravity.CENTER
 	loadingText.setPadding(60, HomeHeight- dp2px * 6, 0, 0)
 
-	val dp2px: Int = dp2px(this, 100.0f) //200.0f
 	val paramstext = FrameLayout.LayoutParams(dp2px * 5, dp2px * 5)
 	paramstext.gravity = Gravity.LEFT
 	loadingText.layoutParams = paramstext
