@@ -875,7 +875,7 @@ fun onstart_overlay(arg1: String, arg2: String) {
 	loadingText.textSize = 20.0f
 	loadingText.gravity = Gravity.LEFT //Gravity.CENTER
 
-	loadingText.setPadding(60, HomeHeight / 3 + dp2px * 1, 0, 0)  
+	loadingText.setPadding(60, HomeHeight / 3 + dp2px * 2, 0, 0)  
 	
 	//loadingText.setPadding(60, HomeHeight/ 2 + dp2px * 0, 0, 0)
 
