@@ -889,6 +889,7 @@ fun onstart_overlay(arg1: String, arg2: String) {
 	overLay.addView(loadingText)
 	*/
 
+	/*
 	val dp2px: Int = dp2px(this, 100.0f) //200.0f
 
 	val loadingText = TextView(this, null)
@@ -906,6 +907,27 @@ fun onstart_overlay(arg1: String, arg2: String) {
 	loadingText.layoutParams = paramstext
 	
 	// 添加到父容器
+	overLay.addView(loadingText)
+*/
+
+	val dp2px: Int = dp2px(this, 100.0f) // 200.0f
+	
+	val loadingText = TextView(this, null)
+	loadingText.text = "口口口口口口口口口口口口口口口口口\n口口口口口口口口口口口口\n口口口口口口口口口口口口口"
+	loadingText.setTextColor(-7829368)
+	loadingText.textSize = 20.0f
+	loadingText.gravity = Gravity.CENTER  // 文本居中显示
+	
+	// **去掉 setPadding，防止文本被推下去**
+	// loadingText.setPadding(0, 0, 0, dp2px)  // 可能导致文本不可见
+	
+	// **改为 WRAP_CONTENT 适应文本内容**
+	val paramstext = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+	paramstext.gravity = Gravity.CENTER_HORIZONTAL or Gravity.BOTTOM  // **底部居中对齐**
+	paramstext.bottomMargin = dp2px  // **确保文本离底部有一定距离**
+	loadingText.layoutParams = paramstext
+	
+	// **添加到父容器**
 	overLay.addView(loadingText)
 
         windowManager.addView(overLay, overLayparams_bass)
